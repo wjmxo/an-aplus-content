@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1464, initial-scale=1">
+  <title>Module 01 - Hero</title>
+  <style>
+    :root {
+      --brand-primary: #5E2A35;
+      --brand-accent: #B08D6E;
+      --brand-bg: #F4F2EE;
+      --brand-card: #FFFFFF;
+      --brand-warm: #EAE5DE;
+      --brand-text: #1F1B1A;
+      --brand-muted: #7C7369;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      width: 1464px;
+      height: 600px;
+      margin: 0;
+      overflow: hidden;
+      background: var(--brand-bg);
+      color: var(--brand-text);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .canvas {
+      width: 1464px;
+      height: 600px;
+      position: relative;
+      padding: 46px 68px;
+      background:
+        radial-gradient(circle at 14% 12%, rgba(255,255,255,.86), transparent 34%),
+        linear-gradient(135deg, #F4F2EE 0%, #EFE8DD 100%);
+    }
+
+    .logo {
+      width: 206px;
+      height: auto;
+      display: block;
+      margin-bottom: 44px;
+    }
+
+    .copy {
+      position: relative;
+      z-index: 4;
+      width: 470px;
+      padding-top: 6px;
+    }
+
+    .script {
+      margin-bottom: 8px;
+      color: var(--brand-accent);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 48px;
+      font-style: italic;
+      line-height: 1;
+    }
+
+    h1 {
+      width: 520px;
+      margin: 0 0 22px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 67px;
+      line-height: .95;
+      font-weight: 500;
+      letter-spacing: 3px;
+    }
+
+    .sub {
+      width: 420px;
+      margin: 0;
+      color: var(--brand-muted);
+      font-size: 27px;
+      line-height: 1.34;
+    }
+
+    .keyword {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 24px;
+      padding: 11px 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(94, 42, 53, .24);
+      color: var(--brand-primary);
+      background: rgba(255,255,255,.48);
+      font-size: 18px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .keyword::before {
+      content: "";
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--brand-primary);
+    }
+
+    .arch {
+      position: absolute;
+      right: 54px;
+      top: 42px;
+      width: 812px;
+      height: 494px;
+      padding: 13px;
+      border-radius: 340px 340px 8px 8px;
+      background: rgba(255,255,255,.9);
+      box-shadow: 0 18px 42px rgba(68, 52, 38, .16);
+      overflow: hidden;
+      z-index: 2;
+    }
+
+    .arch img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 59% center;
+      border-radius: 320px 320px 4px 4px;
+      display: block;
+    }
+
+    .soft-fade {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 59%;
+      z-index: 3;
+      pointer-events: none;
+      background: linear-gradient(90deg, #F4F2EE 0%, rgba(244,242,238,.96) 52%, rgba(244,242,238,0) 100%);
+    }
+
+    .sticker {
+      position: absolute;
+      right: 84px;
+      bottom: 52px;
+      width: 196px;
+      height: 238px;
+      padding: 9px 9px 48px;
+      background: #fff;
+      border-radius: 6px;
+      box-shadow: 0 12px 28px rgba(72, 52, 38, .18);
+      transform: rotate(3deg);
+      z-index: 5;
+    }
+
+    .sticker img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 91% center;
+      display: block;
+    }
+
+    .sticker span {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 15px;
+      text-align: center;
+      color: var(--brand-primary);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 20px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .ribbon {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 66px;
+      background: #C9B9A3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 76px;
+      color: #fff;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 23px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      z-index: 6;
+    }
+  </style>
+</head>
+<body>
+  <main class="canvas" aria-label="ELARAISE hero module">
+    <section class="arch" aria-label="Hero lifestyle image">
+      <img src="../assets/hero-01.png" alt="Woman wearing ELARAISE wine Henley top on a warm street">
+    </section>
+    <div class="soft-fade"></div>
+
+    <section class="copy">
+      <img class="logo" src="../assets/logo.svg" alt="ELARAISE">
+      <div class="script">Effortless</div>
+      <h1>ELEVATED HENLEY ESSENTIAL</h1>
+      <p class="sub">A soft ribbed long sleeve top with a notched V neckline, slim shape, and easy styling for cooler days.</p>
+      <div class="keyword">Slim ribbed fit</div>
+    </section>
+
+    <aside class="sticker" aria-label="White color styling detail">
+      <img src="../assets/hero-01.png" alt="White ELARAISE Henley styling view">
+      <span>White</span>
+    </aside>
+
+    <footer class="ribbon" aria-label="hero keywords">
+      <span>Soft ribbed knit</span>
+      <span>Two-button Henley</span>
+      <span>Easy layering fit</span>
+    </footer>
+  </main>
+</body>
+</html>
