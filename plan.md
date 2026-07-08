@@ -35,11 +35,11 @@ This plan follows the STYLE.md section 4 narrative order. To respect the Premium
 - Compliance notes: if opacity is not proven by real photo testing, do not claim opaque or double-lined.
 
 ## Module 04 - Suitable Scenarios
-- Premium A+ type: Premium Background Image with Text or Premium Simple Image Carousel
+- Premium A+ type: Premium Background Image with Text
 - Size: 1464 x 600 px
 - STYLE.md order covered: 5. Scenario module
 - Core message: one fitted ribbed top moves through work, daily wear, shopping, and date styling.
-- Layout: four lifestyle images in a horizontal row; each image has a muted label strip using serif uppercase text.
+- Layout: single four-image collage; four lifestyle images in a horizontal row; each image has a muted label strip using serif uppercase text. No carousel.
 - Photo needs: four distinct looks: business casual, everyday denim, shopping/cafe street look, and evening/date outfit.
 - Compliance notes: keep claims style-focused; no lifestyle promises or time-sensitive phrasing.
 
@@ -57,23 +57,35 @@ This plan follows the STYLE.md section 4 narrative order. To respect the Premium
 - Size: text table module; optional 1464 x 600 px supporting image
 - STYLE.md order covered: 8. Size chart
 - Core message: slim fit with stretch; choose your usual fitted size, or size up for a more relaxed look.
-- Layout: SIZE CHART (IN) title; Product Measurements and Body Measurements tables; stretch, fit type, and thickness sliders; measurement-guide model image labeled Bust, Length, Sleeve; machine wash line.
-- Photo needs: straight-on model measurement reference image, plus optional flat garment measurement image.
-- Data dependency: exact S-XXL measurements are required before final design production.
+- Layout: SIZE CHART (IN) title; Product Measurements table for XS-2XL with Bust and Length only; Body Measurements table with Bust, Waist, and Hip; stretch, fit type, and thickness sliders; compact measurement guide labeled Bust and Length; machine wash line.
+- Product Measurement:
+  - XS: Bust 29.9 in / 76 cm, Length 23.6 in / 60 cm
+  - S: Bust 31.5 in / 80 cm, Length 24.0 in / 61 cm
+  - M: Bust 33.1 in / 84 cm, Length 24.4 in / 62 cm
+  - L: Bust 34.6 in / 88 cm, Length 24.8 in / 63 cm
+  - XL: Bust 36.2 in / 92 cm, Length 25.2 in / 64 cm
+  - 2XL: Bust 37.8 in / 96 cm, Length 25.6 in / 65 cm
+- Body Measurement:
+  - XS: Bust 31.9-33.1 in, Waist 24.4-25.6 in, Hip 35.0-36.2 in
+  - S: Bust 33.9-35.0 in, Waist 26.4-27.6 in, Hip 37.0-38.2 in
+  - M: Bust 35.8-37.0 in, Waist 28.4-29.5 in, Hip 39.0-40.2 in
+  - L: Bust 38.2-39.4 in, Waist 30.7-31.9 in, Hip 41.3-42.5 in
+  - XL: Bust 41.3-42.5 in, Waist 33.9-35.0 in, Hip 44.5-45.7 in
+  - 2XL: Bust 44.5-45.7 in, Waist 37.0-38.2 in, Hip 47.6-48.8 in
+- Required note: Please allow 0.5–1 inch difference due to manual measurement.
+- Photo needs: optional straight-on model measurement reference image, plus optional flat garment measurement image.
 - Compliance notes: fit guidance is allowed; avoid implying a guaranteed fit.
 
-## Module 07 - From The Brand Matrix
-- Premium A+ type: Premium Comparison Table or Premium Navigation Carousel
-- Size: comparison table image slots 200 x 225 or 300 x 225 px per column, depending on backend choice
+## Module 07 - Brand Story Closing
+- Premium A+ type: Premium Background Image with Text
+- Size: 1464 x 600 px
 - STYLE.md order covered: 9. Brand matrix closing
-- Core message: guide shoppers to complementary ELARAISE essentials while keeping this Henley as the featured item.
-- Layout: "From the brand" heading; featured Henley first, followed by related tops or seasonal basics; use consistent warm background and product cards.
-- Photo needs: clean product/model thumbnails for the Henley and any related ELARAISE items.
-- Data dependency: related ASINs, product names, and valid thumbnails are needed before final production.
-- Compliance notes: only include own-brand products and accurate attributes.
+- Core message: close with the ELARAISE brand idea and a five-color presentation of this single product.
+- Layout: "From the brand" heading; short ELARAISE brand statement; five-color product/swatch display for White, Red, Wine, Brown, and Black; warm oatmeal base with wine and camel accents.
+- Photo needs: optional clean product thumbnails for the five colors. If photos are not ready, use accurate color swatches and logo only.
+- Compliance notes: do not use a comparison table because the shop currently has only this product.
 
 ## Approval Gates Before Design
-- Confirm final size-chart measurements for S-XXL.
+- Confirm final HTML visual treatment for the XS-2XL size chart.
 - Confirm whether the white fabric can be described visually as non-sheer based on real product photography; otherwise omit opacity claims.
-- Confirm related ELARAISE products for the brand matrix.
-- Confirm whether Module 04 should be a single background image or a carousel.
+- Confirm whether Module 07 should use real color product thumbnails once assets are available.
