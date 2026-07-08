@@ -67,23 +67,38 @@ All copy is written for the U.S. marketplace in compliant English and stays focu
   - Stretch: Medium
   - Fit Type: Slim
   - Thickness: Middle
-  - Bust / Length / Sleeve
+  - Bust / Length
   - Machine wash cold with like colors
+- Product Measurement:
+  - XS: Bust 29.9 in / 76 cm, Length 23.6 in / 60 cm
+  - S: Bust 31.5 in / 80 cm, Length 24.0 in / 61 cm
+  - M: Bust 33.1 in / 84 cm, Length 24.4 in / 62 cm
+  - L: Bust 34.6 in / 88 cm, Length 24.8 in / 63 cm
+  - XL: Bust 36.2 in / 92 cm, Length 25.2 in / 64 cm
+  - 2XL: Bust 37.8 in / 96 cm, Length 25.6 in / 65 cm
+- Body Measurement:
+  - XS: Bust 31.9-33.1 in, Waist 24.4-25.6 in, Hip 35.0-36.2 in
+  - S: Bust 33.9-35.0 in, Waist 26.4-27.6 in, Hip 37.0-38.2 in
+  - M: Bust 35.8-37.0 in, Waist 28.4-29.5 in, Hip 39.0-40.2 in
+  - L: Bust 38.2-39.4 in, Waist 30.7-31.9 in, Hip 41.3-42.5 in
+  - XL: Bust 41.3-42.5 in, Waist 33.9-35.0 in, Hip 44.5-45.7 in
+  - 2XL: Bust 44.5-45.7 in, Waist 37.0-38.2 in, Hip 47.6-48.8 in
+- Size note: Please allow 0.5–1 inch difference due to manual measurement.
 - Alt keywords: ELARAISE size chart, women's fitted Henley measurements, slim fit ribbed top sizing, bust length sleeve guide
 
-## Module 07 - From The Brand Matrix
+## Module 07 - Brand Story Closing
 - Headline: FROM THE BRAND
-- Subheadline: More effortless essentials by ELARAISE
-- Body: Explore versatile tops designed for everyday outfits, easy layering, and polished casual style.
+- Subheadline: ELARAISE Effortless Essentials
+- Body: Thoughtful everyday pieces made for easy outfits, soft textures, and polished casual style.
 - Overlay text:
   - ELARAISE Essentials
-  - Ribbed Tops
-  - Layering Basics
-  - Everyday Style
-- Alt keywords: ELARAISE women's tops, ELARAISE ribbed shirts, women's layering basics, casual fitted tops
+  - Soft ribbed texture
+  - Five wearable colors
+  - Everyday fitted style
+- Alt keywords: ELARAISE women's Henley top, ELARAISE ribbed shirt colors, women's fitted long sleeve top, everyday casual top
 
 ## Backend Text Field Notes
-- Keep the final size chart based on verified S-XXL product and body measurements.
+- Keep the final size chart based on verified XS-2XL product and body measurements.
 - Use "Decorative Buttons" wherever the Henley button close-up appears.
 - Do not add opacity claims for the white color unless supported by product photography.
 - Keep backend fields focused on verified product attributes, styling use, and fit guidance.
