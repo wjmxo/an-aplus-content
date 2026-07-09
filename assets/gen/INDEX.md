@@ -11,8 +11,10 @@ All generated assets in this folder use `assets/color-*.jpg` only as garment-fid
 | `gen-portrait-red-01.png` | Module 03 protagonist portrait | `assets/color-red.jpg`, `gen-portrait-wine-01.png` | Waist-up transparent PNG, used for fabric module |
 | `gen-model-wine-side-01.png` | Side-view support pose for module 04 styling story | `assets/color-wine.jpg`, `gen-portrait-wine-01.png` | Transparent PNG, side pose, notched V neckline, two buttons, ribbed long sleeve top |
 | `gen-model-white-back-01.png` | Back-view support pose for module 05 color/story movement | `assets/color-white.jpg`, `gen-portrait-wine-01.png` | Transparent PNG, rear fit view, white ribbed long sleeve top |
+| `gen-model-white-side-01.png` | Stage-one core pack first-auxiliary side-view pose | `assets/color-white.jpg`, `gen-portrait-black-anchor-01.png` | Transparent PNG, white side view, generated to complete the White front/back/side set |
 | `gen-model-red-sit-02.png` | Seated support pose for module 05 styling/color composition | `assets/color-red.jpg`, `gen-portrait-wine-01.png` | Transparent PNG, seated pose, notched V neckline, two buttons, ribbed long sleeve top |
 | `gen-portrait-black-anchor-01.png` | Module 01 front anchor/protagonist portrait | `assets/color-black.jpg`, `gen-portrait-wine-01.png` | Transparent PNG, tall waist-up anchor, clear split V neckline, two buttons, ribbed texture |
+| `gen-portrait-black-back-01.png` | Stage-one core pack main-color back half-body portrait | `assets/color-black.jpg`, `gen-portrait-black-anchor-01.png` | Transparent PNG, black back-view head-to-hip portrait, ribbed back fit visible |
 | `gen-portrait-black-close-01.png` | Historical black close-up portrait, not assigned in current Rule 19 layout | `assets/color-black.jpg`, `gen-portrait-wine-01.png` | Transparent PNG, waist-up close view, clear neckline/buttons/rib texture |
 | `gen-model-black-back-01.png` | Module 02 back over-shoulder protagonist pose | `assets/color-black.jpg`, `gen-portrait-wine-01.png` | Transparent PNG, rear fit view, long sleeves and rib texture |
 | `gen-model-black-sidewalk-01.png` | Module 03 side-view protagonist pose | `assets/color-black.jpg`, `gen-portrait-wine-01.png` | Transparent PNG, side walking pose, neckline/buttons visible from side angle |
@@ -25,6 +27,10 @@ All generated assets in this folder use `assets/color-*.jpg` only as garment-fid
 | `gen-model-black-01.png` | Black cutout model | `assets/color-black.jpg` | Full-body transparent PNG, office-ready pose |
 | `gen-model-red-01.png` | Red cutout model | `assets/color-red.jpg` | Seated transparent PNG |
 | `gen-accessory-neutral-01.png` | Styling flat-lay cutout group | Generated from styling brief | Jeans, handbag, earrings, sandals, sunglasses, belt |
+| `gen-detail-black-neckline-01.png` | Stage-one core pack main-color neckline macro | `assets/color-black.jpg` | Black notched split V neckline, two-button structure visible |
+| `gen-detail-black-button-01.png` | Stage-one core pack main-color button/placket macro | `assets/color-black.jpg` | Black Henley placket with exactly two marble-look decorative buttons |
+| `gen-detail-black-sleeve-01.png` | Stage-one core pack main-color sleeve cuff macro | `assets/color-black.jpg` | Black long sleeve cuff and rib texture |
+| `gen-detail-black-fabric-01.png` | Stage-one core pack main-color fabric swirl macro | `assets/color-black.jpg` | Black ribbed fabric swirl, product-only textile macro |
 | `gen-detail-wine-01.png` | Neckline and button macro | `assets/color-wine.jpg` | Notched neckline and two-button detail |
 | `gen-detail-wine-neckline-02.png` | Independent neckline macro for module 02 | `assets/color-wine.jpg` | Separate notched split V neckline close-up used so detail grid does not repeat the Hero card |
 | `gen-detail-wine-button-01.png` | Independent button macro for module 02 | `assets/color-wine.jpg` | Separate two-button/placket close-up used so detail module does not repeat the fabric macro |
@@ -32,6 +38,10 @@ All generated assets in this folder use `assets/color-*.jpg` only as garment-fid
 | `gen-detail-wine-03.png` | Sleeve cuff macro | `assets/color-wine.jpg` | Long sleeve cuff and rib texture |
 | `gen-bg-warm-01.png` | Street/cafe blurred background | Generated from style brief | Warm bokeh street/cafe backdrop |
 | `gen-bg-warm-02.png` | Interior blurred background | Generated from style brief | Cream interior/lifestyle backdrop |
+| `gen-scene-black-office-01.png` | Stage-one core pack office/business-casual scene | `assets/color-black.jpg`, `gen-portrait-black-anchor-01.png` | Black Henley office scene, warm low-detail background for future typography |
+| `gen-scene-black-cafe-01.png` | Stage-one core pack cafe scene | `assets/color-black.jpg`, `gen-portrait-black-anchor-01.png` | Black Henley cafe scene, relaxed warm lifestyle setting |
+| `gen-scene-black-street-01.png` | Stage-one core pack street scene | `assets/color-black.jpg`, `gen-portrait-black-anchor-01.png` | Black Henley warm street walking scene |
+| `gen-scene-black-home-01.png` | Stage-one core pack home scene | `assets/color-black.jpg`, `gen-portrait-black-anchor-01.png` | Black Henley cozy home scene |
 
 ## Fidelity Check
 
@@ -39,6 +49,23 @@ All generated assets in this folder use `assets/color-*.jpg` only as garment-fid
 - Buttons: two large mottled marble-look buttons retained where the placket is visible.
 - Texture: fine vertical ribbing retained in model and macro images.
 - Color: wine, white, brown, black, and red match the confirmed product color family closely enough for A+ layout use.
+
+## Stage-One Core Pack Audit - ELARAISE Henley
+
+Audit date: 2026-07-10. Main color for the current approved A+ direction: Black. First auxiliary color: White. Warm variant for detail support: Wine.
+
+| Core pack requirement | Files counted | Status |
+|---|---|---|
+| Main color model poses: Black front standing / back / side / walking / seated | `gen-model-black-01.png`, `gen-model-black-back-01.png`, `gen-model-black-sidewalk-01.png`, `gen-model-black-walk-02.png`, `gen-model-black-sit-01.png` | PASS |
+| First auxiliary model poses: White front / back / side | `gen-model-white-01.png`, `gen-model-white-back-01.png`, `gen-model-white-side-01.png` | PASS |
+| Half-body portraits: Black front / Black back / White front | `gen-portrait-black-anchor-01.png`, `gen-portrait-black-back-01.png`, `gen-portrait-white-01.png` | PASS |
+| Main color detail set: Black neckline / button-placket / sleeve cuff / fabric swirl | `gen-detail-black-neckline-01.png`, `gen-detail-black-button-01.png`, `gen-detail-black-sleeve-01.png`, `gen-detail-black-fabric-01.png` | PASS |
+| Warm variant core details: Wine core detail support x2+ | `gen-detail-wine-01.png`, `gen-detail-wine-neckline-02.png`, `gen-detail-wine-button-01.png`, `gen-detail-wine-03.png` | PASS |
+| Scene group: office / cafe / street / home | `gen-scene-black-office-01.png`, `gen-scene-black-cafe-01.png`, `gen-scene-black-street-01.png`, `gen-scene-black-home-01.png` | PASS |
+| Styling flat-lay group: 4-5 accessory items | `gen-accessory-neutral-01.png` | PASS |
+| Size annotation model: main-color seven-eighths/front model or approved fit-reference model | `gen-model-black-01.png`, `gen-portrait-black-anchor-01.png`, `gen-model-white-01.png` | PASS |
+
+Shortage request list: none. The phase-one core pack is ready for user review. Do not start page production until the user confirms the asset library.
 
 ## Full Page Module Asset Allocation (Rule 19)
 
