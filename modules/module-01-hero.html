@@ -118,7 +118,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: 59% center;
+      object-position: 70% center;
       border-radius: 320px 320px 4px 4px;
       display: block;
     }
@@ -146,13 +146,16 @@
       box-shadow: 0 12px 28px rgba(72, 52, 38, .18);
       transform: rotate(3deg);
       z-index: 5;
+      overflow: hidden;
     }
 
     .sticker img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: 91% center;
+      object-position: center top;
+      transform: scale(1.08);
+      transform-origin: center top;
       display: block;
     }
 
@@ -161,8 +164,10 @@
       left: 0;
       right: 0;
       bottom: 15px;
+      z-index: 2;
       text-align: center;
       color: var(--brand-primary);
+      background: #fff;
       font-family: Georgia, "Times New Roman", serif;
       font-size: 20px;
       letter-spacing: 2px;
@@ -205,7 +210,7 @@
     </section>
 
     <aside class="sticker" aria-label="White color styling detail">
-      <img src="../assets/hero-01.png" alt="White ELARAISE Henley styling view">
+      <img src="../assets/color-white.jpg" alt="White ELARAISE Henley styling view">
       <span>White</span>
     </aside>
 

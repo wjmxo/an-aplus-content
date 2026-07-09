@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1464, initial-scale=1">
+  <title>Module 02 - Detail Grid</title>
+  <style>
+    :root {
+      --brand-primary: #5E2A35;
+      --brand-accent: #B08D6E;
+      --brand-bg: #F4F2EE;
+      --brand-card: #FFFFFF;
+      --brand-warm: #EAE5DE;
+      --brand-text: #1F1B1A;
+      --brand-muted: #7C7369;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      width: 1464px;
+      height: 600px;
+      margin: 0;
+      overflow: hidden;
+      background: var(--brand-bg);
+      color: var(--brand-text);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .canvas {
+      width: 1464px;
+      height: 600px;
+      position: relative;
+      padding: 48px 64px 42px;
+      background:
+        radial-gradient(circle at 12% 12%, rgba(255,255,255,.86), transparent 30%),
+        linear-gradient(135deg, #F4F2EE 0%, #EFE8DD 100%);
+    }
+
+    .header {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      margin-bottom: 34px;
+    }
+
+    .eyebrow {
+      color: var(--brand-accent);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 40px;
+      font-style: italic;
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 58px;
+      line-height: 1;
+      font-weight: 500;
+      letter-spacing: 3px;
+    }
+
+    .sub {
+      width: 390px;
+      margin: 0 10px 4px 0;
+      color: var(--brand-muted);
+      font-size: 24px;
+      line-height: 1.28;
+      text-align: right;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+      height: 386px;
+    }
+
+    .tile {
+      position: relative;
+      overflow: hidden;
+      border: 10px solid rgba(255,255,255,.86);
+      border-radius: 7px;
+      background: #fff;
+      box-shadow: 0 15px 34px rgba(72, 52, 38, .13);
+    }
+
+    .tile:nth-child(2) { transform: translateY(14px); }
+    .tile:nth-child(3) { transform: translateY(-8px); }
+
+    .tile img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      filter: saturate(.96) contrast(1.02);
+    }
+
+    .neck img { object-position: 50% 18%; }
+    .button img { object-position: 50% 22%; }
+    .rib img { object-position: 50% 38%; transform: scale(1.35); }
+    .sleeve img { object-position: 50% 62%; }
+
+    .detail-source img {
+      transform-origin: center;
+    }
+
+    .detail-source.neck img {
+      object-position: 0% 48%;
+      transform: scale(1.72);
+    }
+
+    .detail-source.button img {
+      object-position: 58% 54%;
+      transform: scale(1.12);
+    }
+
+    .detail-source.rib img {
+      object-position: 100% 8%;
+      transform: scale(1.75);
+    }
+
+    .detail-source.sleeve img {
+      object-position: 54% 100%;
+      transform: scale(2.1);
+    }
+
+    .detail-source.button .label {
+      top: 17px;
+      bottom: auto;
+    }
+
+    .label {
+      position: absolute;
+      left: 18px;
+      right: 18px;
+      bottom: 17px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      min-height: 42px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.84);
+      color: var(--brand-primary);
+      font-size: 21px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .label::before {
+      content: "";
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--brand-accent);
+    }
+  </style>
+</head>
+<body>
+  <main class="canvas" aria-label="ELARAISE detail grid">
+    <section class="header">
+      <div>
+        <div class="eyebrow">Refined</div>
+        <h1>NOTICE THE DETAILS</h1>
+      </div>
+      <p class="sub">A notched Henley neckline, decorative buttons, soft ribs, and long sleeves create the visible difference.</p>
+    </section>
+
+    <section class="grid" aria-label="Product detail images">
+      <article class="tile detail-source neck">
+        <img src="../assets/detail-02.png" alt="Notched V neck detail">
+        <div class="label">Notched V Neck</div>
+      </article>
+      <article class="tile detail-source button">
+        <img src="../assets/detail-02-buttons.png" alt="Decorative two-button detail">
+        <div class="label">Decorative Buttons</div>
+      </article>
+      <article class="tile detail-source rib">
+        <img src="../assets/detail-02.png" alt="Ribbed knit texture">
+        <div class="label">Ribbed Knit</div>
+      </article>
+      <article class="tile detail-source sleeve">
+        <img src="../assets/detail-02.png" alt="Long sleeve cuff detail">
+        <div class="label">Long Sleeves</div>
+      </article>
+    </section>
+  </main>
+</body>
+</html>

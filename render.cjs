@@ -3,6 +3,10 @@ const { chromium } = require("playwright");
 
 const modules = [
   { file: "module-01-hero.html", width: 1464, height: 600 },
+  { file: "module-02-detail-grid.html", width: 1464, height: 600 },
+  { file: "module-03-fabric.html", width: 1464, height: 600 },
+  { file: "module-04-scenarios.html", width: 1464, height: 600 },
+  { file: "module-05-styling-color.html", width: 1464, height: 600 },
   { file: "module-06-size-chart.html", width: 1464, height: 600 },
   { file: "module-07-brand-story.html", width: 1464, height: 600 },
 ];
