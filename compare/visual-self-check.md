@@ -6,7 +6,7 @@
 - Final cutout model PNGs use transparent backgrounds with white sticker-style outline and soft shadow in the HTML.
 - New pose assets added this round: `gen-model-wine-side-01.png`, `gen-model-white-back-01.png`, and `gen-model-red-sit-02.png`. Pose check contact sheet is saved at `compare/pose-generated-check.jpg`.
 - Black-primary assets added this round: `gen-portrait-black-anchor-01.png`, `gen-portrait-black-close-01.png`, `gen-model-black-back-01.png`, and `gen-model-black-sidewalk-01.png`. Black pose check contact sheet is saved at `compare/black-pose-generated-check.jpg`.
-- Rule 19 assets added this round: `gen-model-black-walk-02.png`, `gen-model-black-sit-01.png`, `gen-detail-wine-neckline-02.png`, and `gen-detail-wine-button-01.png`.
+- Rule 19/20 assets added this round: `gen-model-black-walk-02.png`, `gen-model-black-sit-01.png`, `gen-detail-wine-neckline-02.png`, `gen-detail-wine-button-01.png`, and `gen-model-duo-black-front-white-back-01.png`.
 - Full-page asset allocation is recorded in `assets/gen/INDEX.md`; non-exempt model assets are not reused across modules 01-07.
 
 ## Continuous Canvas 01-03
@@ -30,18 +30,18 @@
 - Source: `modules/continuous-04-05.html`
 - Output master: `output/continuous-04-05.png`
 - Slice outputs: `module-04-scenarios.png`, `module-05-styling-color.png`
-- Slice safety: y=600 falls through the camel divider and walking-model lower leg/blank low-detail area, not through faces, hands, titles, or color labels.
+- Slice safety: y=600 falls through the camel divider and the double-anchor group low-detail torso/waist/leg area, not through faces, hands, titles, or color labels. Both model faces remain more than 60px away from the slice line.
 - Layout change: all main models are transparent cutout stickers. The color module uses generated cutout models plus the generated accessory flat-lay group instead of direct product-photo crops.
 - Required decorative elements: one large two-line `Outfit Notes` script title, small `Color Story` script accent, curled dashed arrows, # tags, swatches, and accessory flat-lay are present.
-- Rule 17 typography: uses italic serif notes, expanded-letter `WALKING VIEW` / `FIVE SHADES` labels, 7.5% translucent watermark words, brown + dark gray script accents, and wavy underlines without adding font families.
+- Rule 17 typography: uses the expanded-letter `WALKING VIEW` label, 7.5% translucent watermark words, brown + dark gray script accents, and wavy underlines without adding font families; the former `FIVE SHADES` label was removed to prevent text overlap.
 - Annotation control: the Style It walking-view italic note and Color Story seated note were removed; no active italic note remains in 04-05.
-- Text-to-model bite check: module 04 uses `LAYER READY` overlapping the walking protagonist arm/leg edge; module 05 uses the lifted styling capsules near the seated protagonist foot and accessory flat-lay.
-- Layout reduction: module 04 keeps only one enlarged walking protagonist; module 05 removes the redundant `#COLOR DROP` label, enlarges the seated protagonist, and moves the three styling capsules up beside the accessory group.
-- Color-weight check: black is the protagonist color for modules 04-05; color variety is handled by swatches and accessories instead of extra model cutouts.
-- Rule 19 model-count check: module 04 uses the black walking protagonist; module 05 uses the black seated protagonist; no white/side-view support model remains in this continuous canvas.
-- Anchor/protagonist check: each screen has a single immediately legible protagonist; module 05 keeps `FIND YOUR EVERYDAY SHADE` fully readable above the swatches.
-- Three-second scan test: module 04 reads `STYLE IT YOUR WAY` -> walking protagonist -> `LAYER READY`; module 05 reads `FIND YOUR EVERYDAY SHADE` -> seated protagonist -> styling capsules/accessory group, with no major jump or empty vertical band.
-- Verdict: pass after moving swatches away from the title, deleting floating notes, reducing redundant labels, enlarging protagonists, and tightening text-to-model bite.
+- Text-to-model bite check: module 04 uses `LAYER READY` overlapping the black front model body edge and `#OOTD` on the white back model shoulder area; module 05 uses the double-anchor lower-body continuation near the lifted styling capsules and accessory flat-lay.
+- Layout reduction: original single walking anchor and seated model are removed from the active 04-05 canvas; one black-front/white-back double-model group now carries the central anchor role.
+- Color-weight check: black remains the primary front read while white adds back-view fit proof; color variety is handled by swatches and accessories.
+- Rule 19/20 model-count check: the double-model group is treated as one deliberate cross-slice anchor group; no other model cutout is active in modules 04-05.
+- Text-overlap check: the `FIVE SHADES` spaced label was removed because it overlapped the Color Story body/title area; the left body copy was narrowed so it no longer sits under the anchor group.
+- Three-second scan test: module 04 reads `STYLE IT YOUR WAY` -> double-model upper body -> `LAYER READY`/`#OOTD`; module 05 reads `FIND YOUR EVERYDAY SHADE` -> anchor-group legs/color swatches -> styling capsules/accessory group, with no major jump or empty vertical band.
+- Verdict: pass after switching to the double-model anchor, removing the overlapping spaced label, narrowing body copy, and confirming slice-line safety.
 
 ## Module 06 - Size Chart
 - Source: `modules/module-06-size-chart.html`

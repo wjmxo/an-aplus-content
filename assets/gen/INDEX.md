@@ -16,8 +16,9 @@ All generated assets in this folder use `assets/color-*.jpg` only as garment-fid
 | `gen-portrait-black-close-01.png` | Historical black close-up portrait, not assigned in current Rule 19 layout | `assets/color-black.jpg`, `gen-portrait-wine-01.png` | Transparent PNG, waist-up close view, clear neckline/buttons/rib texture |
 | `gen-model-black-back-01.png` | Module 02 back over-shoulder protagonist pose | `assets/color-black.jpg`, `gen-portrait-wine-01.png` | Transparent PNG, rear fit view, long sleeves and rib texture |
 | `gen-model-black-sidewalk-01.png` | Module 03 side-view protagonist pose | `assets/color-black.jpg`, `gen-portrait-wine-01.png` | Transparent PNG, side walking pose, neckline/buttons visible from side angle |
-| `gen-model-black-walk-02.png` | Module 04 walking protagonist pose | `assets/color-black.jpg`, `gen-portrait-black-anchor-01.png` | Transparent PNG, 3/4 front walking pose, clear notched neckline, two marble-look buttons, rib texture |
-| `gen-model-black-sit-01.png` | Module 05 seated protagonist pose | `assets/color-black.jpg`, `gen-portrait-black-anchor-01.png` | Transparent PNG, seated pose, clear notched neckline, two marble-look buttons, rib texture |
+| `gen-model-black-walk-02.png` | Historical/inactive walking pose retained in asset library | `assets/color-black.jpg`, `gen-portrait-black-anchor-01.png` | Transparent PNG, 3/4 front walking pose; removed from active 04-05 layout after double-anchor update |
+| `gen-model-black-sit-01.png` | Historical/inactive seated pose retained in asset library | `assets/color-black.jpg`, `gen-portrait-black-anchor-01.png` | Transparent PNG, seated pose; removed from active 04-05 layout after double-anchor update |
+| `gen-model-duo-black-front-white-back-01.png` | Module 04/05 double-model anchor group | `assets/color-black.jpg`, `assets/color-white.jpg` | Transparent PNG, black front view with notched V/two buttons and white back view with ribbed back fit, used as one crossing anchor group |
 | `gen-model-wine-01.png` | Main wine cutout model | `assets/color-wine.jpg` | Full-body transparent PNG, notched V neckline, two buttons, ribbed long sleeve top |
 | `gen-model-white-01.png` | White cutout model | `assets/color-white.jpg` | Full-body transparent PNG, walking pose |
 | `gen-model-brown-01.png` | Brown cutout model | `assets/color-brown.jpg` | Full-body transparent PNG, cafe prop pose |
@@ -48,8 +49,8 @@ Rule 19 self-check: no non-exempt generated model file is assigned to more than 
 | 01 Brand + Hero | Protagonist / anchor | `gen-portrait-black-anchor-01.png` | Black front waist-up anchor, clear neckline/buttons | Unique |
 | 02 Detail Grid | Protagonist | `gen-model-black-back-01.png` | Black back over-shoulder, non-front view | Unique |
 | 03 Fabric | Protagonist | `gen-model-black-sidewalk-01.png` | Black side-view walking crop | Unique |
-| 04 Scenario | Protagonist | `gen-model-black-walk-02.png` | Black 3/4 front walking pose | Unique |
-| 05 Styling + Color | Protagonist | `gen-model-black-sit-01.png` | Black seated pose | Unique |
+| 04 Scenario | Double anchor group, upper body | `gen-model-duo-black-front-white-back-01.png` | Black front + white back, head/chest in Style It | Unique group |
+| 05 Styling + Color | Double anchor group, lower body continuation | `gen-model-duo-black-front-white-back-01.png` | Same group legs/hips extend into Color Story | Allowed deliberate cross-slice continuation |
 | 06 Size Chart | Measurement model | `gen-model-white-01.png` | White fit/measurement guide | Unique outside brand-lineup exception |
 | 07 Brand Story | From the Brand color lineup | `gen-model-white-01.png`, `gen-model-red-01.png`, `gen-model-wine-01.png`, `gen-model-brown-01.png`, `gen-model-black-01.png` | Multi-color product lineup | Exempt: color/brand display |
 
