@@ -12,6 +12,10 @@ All generated assets in this folder use `assets/color-*.jpg` only as garment-fid
 | `gen-model-wine-side-01.png` | Side-view support pose for module 04 styling story | `assets/color-wine.jpg`, `gen-portrait-wine-01.png` | Transparent PNG, side pose, notched V neckline, two buttons, ribbed long sleeve top |
 | `gen-model-white-back-01.png` | Back-view support pose for module 05 color/story movement | `assets/color-white.jpg`, `gen-portrait-wine-01.png` | Transparent PNG, rear fit view, white ribbed long sleeve top |
 | `gen-model-red-sit-02.png` | Seated support pose for module 05 styling/color composition | `assets/color-red.jpg`, `gen-portrait-wine-01.png` | Transparent PNG, seated pose, notched V neckline, two buttons, ribbed long sleeve top |
+| `gen-portrait-black-anchor-01.png` | Black anchor/protagonist portrait for modules 01 and 04 | `assets/color-black.jpg`, `gen-portrait-wine-01.png` | Transparent PNG, tall waist-up anchor, clear split V neckline, two buttons, ribbed texture |
+| `gen-portrait-black-close-01.png` | Black close-up protagonist portrait for modules 02, 03, and 05 | `assets/color-black.jpg`, `gen-portrait-wine-01.png` | Transparent PNG, waist-up close view, clear neckline/buttons/rib texture |
+| `gen-model-black-back-01.png` | Non-front back over-shoulder support pose for module 02 | `assets/color-black.jpg`, `gen-portrait-wine-01.png` | Transparent PNG, rear fit view, long sleeves and rib texture |
+| `gen-model-black-sidewalk-01.png` | Non-front side walking support pose for module 03 | `assets/color-black.jpg`, `gen-portrait-wine-01.png` | Transparent PNG, side walking pose, neckline/buttons visible from side angle |
 | `gen-model-wine-01.png` | Main wine cutout model | `assets/color-wine.jpg` | Full-body transparent PNG, notched V neckline, two buttons, ribbed long sleeve top |
 | `gen-model-white-01.png` | White cutout model | `assets/color-white.jpg` | Full-body transparent PNG, walking pose |
 | `gen-model-brown-01.png` | Brown cutout model | `assets/color-brown.jpg` | Full-body transparent PNG, cafe prop pose |
