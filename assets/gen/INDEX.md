@@ -4,6 +4,11 @@ All generated assets in this folder use `assets/color-*.jpg` only as garment-fid
 
 | File | Use | Reference source | Notes |
 |---|---|---|---|
+| `gen-portrait-wine-01.png` | First identity-lock portrait and module 01/05 protagonist | `assets/color-wine.jpg` | Waist-up transparent PNG, used as page identity reference, clear neckline/buttons/rib texture |
+| `gen-portrait-white-01.png` | Module 04 anchor protagonist | `assets/color-white.jpg`, `gen-portrait-wine-01.png` | Waist-up transparent PNG, large anchor crossing modules 04/05 |
+| `gen-portrait-brown-01.png` | Brown protagonist/support portrait | `assets/color-brown.jpg`, `gen-portrait-wine-01.png` | Waist-up transparent PNG, coffee styling cue |
+| `gen-portrait-black-01.png` | Black protagonist/support portrait | `assets/color-black.jpg`, `gen-portrait-wine-01.png` | Waist-up transparent PNG, office-ready tone |
+| `gen-portrait-red-01.png` | Module 03 protagonist portrait | `assets/color-red.jpg`, `gen-portrait-wine-01.png` | Waist-up transparent PNG, used for fabric module |
 | `gen-model-wine-01.png` | Main wine cutout model | `assets/color-wine.jpg` | Full-body transparent PNG, notched V neckline, two buttons, ribbed long sleeve top |
 | `gen-model-white-01.png` | White cutout model | `assets/color-white.jpg` | Full-body transparent PNG, walking pose |
 | `gen-model-brown-01.png` | Brown cutout model | `assets/color-brown.jpg` | Full-body transparent PNG, cafe prop pose |

@@ -9,19 +9,21 @@
 - Source: `modules/continuous-01-03.html`
 - Output master: `output/continuous-01-03.png`
 - Slice outputs: `module-01-hero.png`, `module-02-detail-grid.png`, `module-03-fabric.png`
-- Slice safety: y=600 crosses the soft camel transition band and the lower body of the wine/white cutout model; y=1200 crosses a neutral transition band. Faces, headlines, button macro cards, and key text stay away from the slice line.
+- Slice safety: y=600 crosses the soft camel transition band and the wine anchor model torso; y=1200 crosses the neutral transition band near lower-body/blank zones. Faces, hands, headlines, button macro cards, and key text stay at least 60px away from the slice line.
 - Layout change: main model is a cutout sticker, not a rectangular photo card. Detail and fabric images remain rectangular white cards as allowed small/detail images.
-- Required decorative elements: two-line brown script titles, watermark letters, # tags, and curled dashed arrows are present.
-- Verdict: pass after moving script titles behind the key headings.
+- Required decorative elements: one large two-line `Henley Mood` script title, small `Detail Proof` / `Soft Touch` script accents, watermark letters, # tags, and curled dashed arrows are present.
+- Anchor/protagonist check: the wine anchor is the largest element and crosses the 01/02 slice through torso only; each module has one immediately legible protagonist.
+- Verdict: pass after moving script titles away from key headings and moving the hero detail card clear of the slice line.
 
 ## Continuous Canvas 04-05
 - Source: `modules/continuous-04-05.html`
 - Output master: `output/continuous-04-05.png`
 - Slice outputs: `module-04-scenarios.png`, `module-05-styling-color.png`
-- Slice safety: y=600 falls through the camel divider and lower leg/feet area of the cutout models, not through faces or titles.
+- Slice safety: y=600 falls through the camel divider and the white anchor model waist/sleeve low-detail area, not through faces, hands, or titles.
 - Layout change: all main models are transparent cutout stickers. The color module uses generated cutout models plus the generated accessory flat-lay group instead of direct product-photo crops.
-- Required decorative elements: two-line `Outfit Notes` and `Color Story` script titles plus curled dashed arrows are present.
-- Verdict: pass after moving the script layer behind models and core text.
+- Required decorative elements: one large two-line `Outfit Notes` script title, small `Color Story` script accent, curled dashed arrows, # tags, swatches, and accessory flat-lay are present.
+- Anchor/protagonist check: the white anchor is the largest element and crosses the 04/05 slice through torso/hip only; module 05 keeps `FIND YOUR EVERYDAY SHADE` fully readable above the swatches.
+- Verdict: pass after moving swatches away from the title and separating script accents from cutout models.
 
 ## Module 06 - Size Chart
 - Source: `modules/module-06-size-chart.html`
@@ -40,3 +42,5 @@
 ## Residual Risk
 - Generated model identity is close enough for a unified A+ page but not perfectly identical across every pose.
 - The generated garment details passed the visible check for notched split V neckline, two marble-look buttons, long sleeves, rib texture, and color family, but final production proof can still be improved with real photography later.
+- Face/hand zoom check is saved at `compare/cutout-face-hand-check.jpg`; no malformed faces or fingers were found in the current portrait set.
+- Pixel slice verification is saved at `compare/slice-verification.md`; all continuous-canvas slices match the exported module images.
