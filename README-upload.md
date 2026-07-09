@@ -7,6 +7,8 @@ ASIN focus: B0H1X6VPMM
 
 All image files are exported at 2x resolution for clarity. Upload them to matching Premium A+ modules as image assets.
 
+Modules 01-03 are designed as one continuous 1464 x 1800 canvas and sliced into three 1464 x 600 modules. Modules 04-05 are designed as one continuous 1464 x 1200 canvas and sliced into two 1464 x 600 modules. Use `render.cjs` or `render-continuous.cjs`, then run `scripts/slice_continuous.py`, `scripts/visual_compare.py`, and `scripts/make_contact_sheet.py`.
+
 | File | Backend module | Intended size | Main message |
 |---|---|---:|---|
 | `output/module-01-hero.png` | Premium Full Image | 1464 x 600 | Brand hero and Henley first impression |

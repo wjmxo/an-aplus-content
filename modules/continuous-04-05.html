@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1464, initial-scale=1">
+  <title>Continuous Modules 04-05</title>
+  <style>
+    :root {
+      --primary: #5E2A35;
+      --accent: #B08D6E;
+      --bg: #F4F2EE;
+      --warm: #C9B9A3;
+      --text: #1F1B1A;
+      --muted: #756E68;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      width: 1464px;
+      height: 1200px;
+      margin: 0;
+      overflow: hidden;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .canvas {
+      position: relative;
+      width: 1464px;
+      height: 1200px;
+      overflow: hidden;
+      background:
+        linear-gradient(100deg, rgba(94,42,53,.12) 0 24%, transparent 24% 100%),
+        linear-gradient(180deg, #EFE7DB 0%, #F4F2EE 51%, #E8DFD1 100%);
+    }
+
+    .slice-gap {
+      position: absolute;
+      left: 0;
+      top: 578px;
+      width: 1464px;
+      height: 48px;
+      background: rgba(201,185,163,.92);
+      z-index: 8;
+    }
+
+    .watermark {
+      position: absolute;
+      z-index: 1;
+      color: rgba(94,42,53,.07);
+      font-family: Georgia, "Times New Roman", serif;
+      text-transform: uppercase;
+      pointer-events: none;
+      letter-spacing: 12px;
+    }
+
+    .wm-scene { left: 28px; top: 82px; font-size: 172px; }
+    .wm-color { right: 18px; top: 692px; font-size: 164px; }
+
+    h2 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 500;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .scene-photo {
+      position: absolute;
+      left: -26px;
+      top: 24px;
+      width: 1516px;
+      height: 532px;
+      z-index: 2;
+      overflow: hidden;
+      border-radius: 0;
+      box-shadow: 0 18px 40px rgba(72,52,38,.16);
+    }
+
+    .scene-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 42%;
+      display: block;
+      filter: saturate(.98) contrast(1.02);
+    }
+
+    .scene-shade {
+      position: absolute;
+      left: -26px;
+      top: 24px;
+      width: 1516px;
+      height: 532px;
+      z-index: 3;
+      background:
+        linear-gradient(90deg, rgba(244,242,238,.92) 0%, rgba(244,242,238,.54) 23%, rgba(244,242,238,.02) 52%, rgba(94,42,53,.18) 100%),
+        linear-gradient(0deg, rgba(31,27,26,.12), rgba(31,27,26,0) 38%);
+      pointer-events: none;
+    }
+
+    .scene-title {
+      position: absolute;
+      left: 68px;
+      top: 72px;
+      width: 420px;
+      z-index: 7;
+      font-size: 62px;
+      line-height: .98;
+    }
+
+    .scene-copy {
+      position: absolute;
+      left: 72px;
+      top: 248px;
+      width: 380px;
+      z-index: 7;
+      color: var(--muted);
+      font-size: 25px;
+      line-height: 1.3;
+    }
+
+    .scene-script,
+    .color-script {
+      position: absolute;
+      z-index: 9;
+      color: rgba(176,141,110,.95);
+      font-family: Georgia, "Times New Roman", serif;
+      font-style: italic;
+      text-shadow: 0 2px 0 rgba(255,255,255,.72);
+    }
+
+    .scene-script {
+      right: 86px;
+      top: 52px;
+      font-size: 96px;
+      transform: rotate(-8deg);
+    }
+
+    .dash {
+      position: absolute;
+      z-index: 9;
+      border-top: 3px dashed rgba(94,42,53,.48);
+      transform-origin: left center;
+    }
+
+    .dash.one {
+      left: 436px;
+      top: 394px;
+      width: 210px;
+      transform: rotate(-11deg);
+    }
+
+    .dash.one::after {
+      content: "";
+      position: absolute;
+      right: -5px;
+      top: -8px;
+      width: 15px;
+      height: 15px;
+      border-right: 3px solid rgba(94,42,53,.48);
+      border-top: 3px solid rgba(94,42,53,.48);
+      transform: rotate(45deg);
+    }
+
+    .tag {
+      position: absolute;
+      z-index: 10;
+      padding: 9px 18px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.70);
+      border: 2px dashed rgba(94,42,53,.34);
+      color: var(--primary);
+      font-size: 21px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .tag.ootd { right: 108px; top: 462px; transform: rotate(5deg); }
+    .tag.layer { left: 510px; top: 90px; transform: rotate(-4deg); }
+    .tag.color { left: 78px; top: 1090px; transform: rotate(-4deg); }
+
+    .mini-feed {
+      position: absolute;
+      right: 310px;
+      top: 356px;
+      z-index: 9;
+      width: 238px;
+      height: 160px;
+      padding: 10px;
+      background: rgba(255,255,255,.86);
+      border-radius: 8px;
+      box-shadow: 0 14px 34px rgba(72,52,38,.18);
+      transform: rotate(-3deg);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+
+    .mini-feed img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 5px;
+      display: block;
+    }
+
+    .color-title {
+      position: absolute;
+      left: 72px;
+      top: 704px;
+      width: 410px;
+      z-index: 8;
+      font-size: 58px;
+      line-height: .98;
+    }
+
+    .color-copy {
+      position: absolute;
+      left: 76px;
+      top: 858px;
+      width: 350px;
+      z-index: 8;
+      color: var(--muted);
+      font-size: 24px;
+      line-height: 1.28;
+    }
+
+    .color-script {
+      left: 520px;
+      top: 846px;
+      font-size: 78px;
+      transform: rotate(-8deg);
+    }
+
+    .sticker {
+      position: absolute;
+      z-index: 7;
+      padding: 10px 10px 42px;
+      background: #fff;
+      border-radius: 7px;
+      box-shadow: 0 16px 36px rgba(72,52,38,.18);
+      overflow: hidden;
+    }
+
+    .sticker img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
+    .sticker span {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 10px;
+      color: var(--primary);
+      text-align: center;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 17px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .s-wine { left: 498px; top: 650px; width: 272px; height: 386px; transform: rotate(-5deg); z-index: 8; }
+    .s-red { left: 704px; top: 706px; width: 252px; height: 360px; transform: rotate(4deg); z-index: 9; }
+    .s-white { left: 900px; top: 638px; width: 270px; height: 394px; transform: rotate(-2deg); z-index: 8; }
+    .s-brown { right: 118px; top: 728px; width: 252px; height: 354px; transform: rotate(5deg); z-index: 9; }
+    .s-black { right: -8px; top: 870px; width: 242px; height: 330px; transform: rotate(-4deg); z-index: 8; }
+
+    .swatches {
+      position: absolute;
+      left: 72px;
+      top: 1018px;
+      z-index: 8;
+      display: flex;
+      gap: 14px;
+    }
+
+    .swatch {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      border: 5px solid #fff;
+      box-shadow: 0 8px 18px rgba(72,52,38,.18);
+    }
+
+    .wine { background: #5E2A35; }
+    .red { background: #904341; }
+    .white { background: #F8F4EE; }
+    .brown { background: #7A5544; }
+    .black { background: #22201F; }
+
+    .notes {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 34px;
+      z-index: 10;
+      display: flex;
+      justify-content: center;
+      gap: 28px;
+    }
+
+    .note {
+      min-width: 176px;
+      padding: 12px 18px;
+      border-radius: 999px;
+      color: var(--primary);
+      background: rgba(255,255,255,.76);
+      border: 1px solid rgba(94,42,53,.22);
+      font-size: 18px;
+      text-align: center;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+  <main class="canvas" aria-label="ELARAISE continuous modules 04 to 05">
+    <div class="watermark wm-scene">OOTD</div>
+    <div class="watermark wm-color">COLOR</div>
+    <div class="scene-photo">
+      <img src="../assets/scenarios-04.png" alt="Four lifestyle ways to wear the ELARAISE Henley top">
+    </div>
+    <div class="scene-shade"></div>
+    <h2 class="scene-title">STYLE IT YOUR WAY</h2>
+    <p class="scene-copy">Wear it tucked, layered, or relaxed. The slim ribbed shape keeps the look neat from weekday errands to coffee plans.</p>
+    <div class="scene-script">Outfits</div>
+    <div class="tag layer">Layer Ready</div>
+    <div class="tag ootd">#OOTD</div>
+    <div class="dash one"></div>
+    <div class="mini-feed">
+      <img src="../assets/color-wine.jpg" alt="Wine Henley close crop">
+      <img src="../assets/color-white.jpg" alt="White Henley close crop">
+    </div>
+    <div class="slice-gap" aria-hidden="true"></div>
+
+    <h2 class="color-title">FIND YOUR EVERYDAY SHADE</h2>
+    <p class="color-copy">Choose a grounded neutral or a rich seasonal tone. Each color keeps the same notched neckline and ribbed texture.</p>
+    <div class="color-script">color drop</div>
+    <div class="tag color">#COLOR DROP</div>
+    <section class="sticker s-wine"><img src="../assets/color-wine.jpg" alt="Wine color Henley"><span>Wine</span></section>
+    <section class="sticker s-red"><img src="../assets/color-red.jpg" alt="Red color Henley"><span>Red</span></section>
+    <section class="sticker s-white"><img src="../assets/color-white.jpg" alt="White color Henley"><span>White</span></section>
+    <section class="sticker s-brown"><img src="../assets/color-brown.jpg" alt="Brown color Henley"><span>Brown</span></section>
+    <section class="sticker s-black"><img src="../assets/color-black.jpg" alt="Black color Henley"><span>Black</span></section>
+    <div class="swatches" aria-label="Available colors">
+      <span class="swatch wine"></span>
+      <span class="swatch red"></span>
+      <span class="swatch white"></span>
+      <span class="swatch brown"></span>
+      <span class="swatch black"></span>
+    </div>
+    <section class="notes" aria-label="Styling notes">
+      <div class="note">Slim Ribbed Fit</div>
+      <div class="note">Tuck or Layer</div>
+      <div class="note">Five Easy Colors</div>
+    </section>
+  </main>
+</body>
+</html>

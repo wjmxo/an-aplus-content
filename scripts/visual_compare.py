@@ -7,6 +7,7 @@ PAIRS = [
     ("output/module-02-detail-grid.png", "reference/14-waffle-knit-henley.jpg", "compare/module-02-vs-ref-14.jpg"),
     ("output/module-03-fabric.png", "reference/21-longsleeve-vneck-ribbed-fall.jpg", "compare/module-03-vs-ref-21.jpg"),
     ("output/module-04-scenarios.png", "reference/26-henley-button-slimfit.jpg", "compare/module-04-vs-ref-26.jpg"),
+    ("output/module-05-styling-color.png", "reference/26-henley-button-slimfit.jpg", "compare/module-05-vs-ref-26.jpg"),
     ("output/module-06-size-chart.png", "reference/09-longsleeve-henley-ribbed.jpg", "compare/module-06-vs-ref-09.jpg"),
     ("output/module-07-brand-story.png", "reference/26-henley-button-slimfit.jpg", "compare/module-07-vs-ref-26.jpg"),
 ]

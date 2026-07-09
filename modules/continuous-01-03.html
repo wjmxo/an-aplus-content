@@ -1,0 +1,563 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1464, initial-scale=1">
+  <title>Continuous Modules 01-03</title>
+  <style>
+    :root {
+      --primary: #5E2A35;
+      --accent: #B08D6E;
+      --bg: #F4F2EE;
+      --warm: #C9B9A3;
+      --text: #1F1B1A;
+      --muted: #756E68;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      width: 1464px;
+      height: 1800px;
+      margin: 0;
+      overflow: hidden;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .canvas {
+      position: relative;
+      width: 1464px;
+      height: 1800px;
+      background:
+        radial-gradient(circle at 18% 8%, rgba(255,255,255,.92), transparent 24%),
+        radial-gradient(circle at 88% 42%, rgba(255,255,255,.62), transparent 24%),
+        linear-gradient(180deg, #F4F2EE 0%, #EFE7DB 55%, #F4F2EE 100%);
+      overflow: hidden;
+    }
+
+    .soft-band {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 558px;
+      height: 92px;
+      background: rgba(201,185,163,.94);
+      z-index: 4;
+    }
+
+    .soft-band.bottom {
+      top: 1170px;
+      height: 86px;
+      opacity: .78;
+    }
+
+    .logo {
+      position: absolute;
+      left: 74px;
+      top: 66px;
+      width: 198px;
+      z-index: 12;
+    }
+
+    .watermark {
+      position: absolute;
+      z-index: 1;
+      color: rgba(94,42,53,.06);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 178px;
+      letter-spacing: 13px;
+      text-transform: uppercase;
+      pointer-events: none;
+    }
+
+    .wm-hero { left: 458px; top: 10px; }
+    .wm-detail { left: 24px; top: 704px; font-size: 156px; }
+    .wm-fabric { right: 12px; top: 1236px; font-size: 150px; }
+
+    h1, h2 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 500;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .hero-title {
+      position: absolute;
+      left: 70px;
+      top: 160px;
+      width: 560px;
+      z-index: 12;
+      font-size: 66px;
+      line-height: .95;
+    }
+
+    .hero-script {
+      position: absolute;
+      left: 410px;
+      top: 154px;
+      z-index: 13;
+      color: var(--accent);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 82px;
+      font-style: italic;
+      line-height: 1;
+      transform: rotate(-8deg);
+      text-shadow: 0 2px 0 rgba(255,255,255,.72);
+    }
+
+    .hero-copy {
+      position: absolute;
+      left: 72px;
+      top: 402px;
+      width: 430px;
+      z-index: 12;
+      color: var(--muted);
+      font-size: 27px;
+      line-height: 1.32;
+    }
+
+    .hero-photo {
+      position: absolute;
+      right: -22px;
+      top: 26px;
+      width: 910px;
+      height: 704px;
+      border: 13px solid rgba(255,255,255,.90);
+      border-radius: 350px 350px 8px 8px;
+      overflow: hidden;
+      box-shadow: 0 18px 42px rgba(68,52,38,.16);
+      z-index: 2;
+    }
+
+    .hero-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 70% center;
+      display: block;
+    }
+
+    .fade-left {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 49%;
+      height: 650px;
+      z-index: 3;
+      background: linear-gradient(90deg, #F4F2EE 0%, rgba(244,242,238,.96) 53%, rgba(244,242,238,0) 100%);
+      pointer-events: none;
+    }
+
+    .polaroid {
+      position: absolute;
+      z-index: 10;
+      padding: 10px 10px 42px;
+      background: #fff;
+      border-radius: 6px;
+      box-shadow: 0 14px 32px rgba(72,52,38,.20);
+      overflow: hidden;
+    }
+
+    .polaroid img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
+    .polaroid span {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 10px;
+      color: var(--primary);
+      text-align: center;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 17px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .p-wine-hero { right: 348px; top: 382px; width: 238px; height: 292px; transform: rotate(-5deg); }
+    .p-white-hero { right: 158px; top: 446px; width: 210px; height: 280px; transform: rotate(4deg); }
+    .p-brown-hero { right: 28px; top: 86px; width: 178px; height: 248px; transform: rotate(5deg); }
+
+    .hash {
+      position: absolute;
+      z-index: 14;
+      padding: 9px 18px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.64);
+      border: 2px dashed rgba(94,42,53,.36);
+      color: var(--primary);
+      font-size: 22px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      transform: rotate(-5deg);
+    }
+
+    .hash.hero { left: 512px; top: 482px; }
+    .hash.detail { right: 322px; top: 704px; color: #fff; background: rgba(94,42,53,.82); border: 0; transform: rotate(5deg); }
+
+    .band-copy {
+      position: absolute;
+      top: 626px;
+      left: 0;
+      right: 0;
+      z-index: 7;
+      display: flex;
+      justify-content: center;
+      gap: 94px;
+      color: #fff;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 22px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .model-cross {
+      position: absolute;
+      left: -30px;
+      top: 662px;
+      width: 284px;
+      height: 470px;
+      z-index: 6;
+      border: 10px solid rgba(255,255,255,.9);
+      background: #fff;
+      border-radius: 6px;
+      overflow: hidden;
+      transform: rotate(-3deg);
+      box-shadow: 0 16px 34px rgba(72,52,38,.18);
+    }
+
+    .model-cross img,
+    .side-model img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
+    .detail-title {
+      position: absolute;
+      left: 300px;
+      top: 686px;
+      z-index: 9;
+      font-size: 58px;
+      line-height: 1;
+    }
+
+    .detail-script {
+      position: absolute;
+      left: 242px;
+      top: 638px;
+      z-index: 10;
+      color: var(--accent);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 54px;
+      font-style: italic;
+      transform: rotate(-5deg);
+    }
+
+    .detail-grid {
+      position: absolute;
+      left: 280px;
+      top: 790px;
+      width: 1020px;
+      height: 330px;
+      z-index: 8;
+      display: grid;
+      grid-template-columns: 1.1fr .92fr .98fr .92fr;
+      gap: 18px;
+    }
+
+    .tile {
+      position: relative;
+      overflow: hidden;
+      border: 10px solid rgba(255,255,255,.88);
+      border-radius: 7px;
+      background: #fff;
+      box-shadow: 0 15px 34px rgba(72,52,38,.13);
+    }
+
+    .tile:nth-child(2) { transform: translateY(18px); }
+    .tile:nth-child(3) { transform: translateY(-8px); }
+    .tile:nth-child(4) { transform: translateY(16px); }
+
+    .tile img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      filter: saturate(.96) contrast(1.02);
+    }
+
+    .neck img { object-position: 0% 48%; transform: scale(1.68); }
+    .button img { object-position: 58% 54%; transform: scale(1.1); }
+    .rib img { object-position: 100% 8%; transform: scale(1.72); }
+    .sleeve img { object-position: 54% 100%; transform: scale(2.05); }
+
+    .label {
+      position: absolute;
+      left: 16px;
+      right: 16px;
+      bottom: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      min-height: 40px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.84);
+      color: var(--primary);
+      font-size: 19px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .label::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    .button .label { top: 16px; bottom: auto; }
+
+    .side-model {
+      position: absolute;
+      right: -24px;
+      top: 778px;
+      width: 190px;
+      height: 334px;
+      z-index: 6;
+      border: 9px solid rgba(255,255,255,.9);
+      border-radius: 6px;
+      background: #fff;
+      overflow: hidden;
+      transform: rotate(4deg);
+      box-shadow: 0 16px 34px rgba(72,52,38,.16);
+    }
+
+    .fabric-title {
+      position: absolute;
+      left: 72px;
+      top: 1322px;
+      z-index: 9;
+      font-size: 68px;
+      line-height: .96;
+    }
+
+    .fabric-script {
+      position: absolute;
+      left: 72px;
+      top: 1264px;
+      z-index: 10;
+      color: var(--accent);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 54px;
+      font-style: italic;
+    }
+
+    .fabric-copy {
+      position: absolute;
+      left: 72px;
+      top: 1534px;
+      width: 420px;
+      z-index: 9;
+      color: var(--muted);
+      font-size: 25px;
+      line-height: 1.28;
+    }
+
+    .fabric-bg {
+      position: absolute;
+      inset: 1180px 0 0 0;
+      z-index: 1;
+      opacity: .24;
+    }
+
+    .fabric-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 66% center;
+    }
+
+    .fabric-main {
+      position: absolute;
+      right: 28px;
+      top: 1270px;
+      width: 690px;
+      height: 474px;
+      z-index: 5;
+      border: 12px solid rgba(255,255,255,.9);
+      border-radius: 7px;
+      overflow: hidden;
+      transform: rotate(2deg);
+      box-shadow: 0 18px 42px rgba(72,52,38,.17);
+    }
+
+    .fabric-main img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 62% 50%;
+      display: block;
+    }
+
+    .fabric-sticker {
+      position: absolute;
+      left: 430px;
+      top: 1326px;
+      width: 292px;
+      height: 360px;
+      z-index: 6;
+      padding: 9px;
+      background: #fff;
+      border-radius: 7px;
+      box-shadow: 0 16px 34px rgba(72,52,38,.15);
+      transform: rotate(-5deg);
+      overflow: hidden;
+    }
+
+    .fabric-sticker img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 27% 48%;
+      transform: scale(1.75);
+      display: block;
+    }
+
+    .mini-model {
+      position: absolute;
+      z-index: 7;
+      width: 176px;
+      height: 244px;
+      border: 8px solid rgba(255,255,255,.9);
+      border-radius: 7px;
+      background: #fff;
+      overflow: hidden;
+      box-shadow: 0 12px 28px rgba(72,52,38,.16);
+    }
+
+    .mini-model img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
+    .mini-white { left: 334px; top: 1228px; transform: rotate(5deg); }
+
+    .touch {
+      position: absolute;
+      right: 384px;
+      top: 1388px;
+      z-index: 8;
+      color: rgba(176,141,110,.92);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 82px;
+      font-style: italic;
+      transform: rotate(-10deg);
+      text-shadow: 0 2px 0 rgba(255,255,255,.72);
+    }
+
+    .mini-black { left: 506px; top: 1480px; transform: rotate(-4deg); }
+
+    .proofs {
+      position: absolute;
+      left: 72px;
+      bottom: 44px;
+      z-index: 9;
+      display: flex;
+      gap: 16px;
+    }
+
+    .proof {
+      min-width: 132px;
+      padding: 11px 16px;
+      border-radius: 999px;
+      color: var(--primary);
+      background: rgba(255,255,255,.76);
+      border: 1px solid rgba(94,42,53,.20);
+      font-size: 18px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <main class="canvas" aria-label="ELARAISE continuous modules 01 to 03">
+    <div class="watermark wm-hero">ELARAISE</div>
+    <div class="watermark wm-detail">DETAILS</div>
+    <div class="watermark wm-fabric">RIBBED</div>
+    <div class="soft-band"></div>
+    <div class="soft-band bottom"></div>
+    <img class="logo" src="../assets/logo.svg" alt="ELARAISE">
+
+    <section class="hero-photo" aria-label="Hero lifestyle photo">
+      <img src="../assets/hero-01.png" alt="Woman wearing wine ELARAISE Henley top">
+    </section>
+    <div class="fade-left"></div>
+    <h1 class="hero-title">ELEVATED HENLEY ESSENTIAL</h1>
+    <div class="hero-script">Effortless</div>
+    <p class="hero-copy">A soft ribbed long sleeve top with a notched V neckline, slim shape, and easy styling for cooler days.</p>
+    <div class="hash hero">#OOTD</div>
+    <aside class="polaroid p-wine-hero">
+      <img src="../assets/color-wine.jpg" alt="Wine Henley crop">
+      <span>Wine</span>
+    </aside>
+    <aside class="polaroid p-white-hero">
+      <img src="../assets/color-white.jpg" alt="White Henley crop">
+      <span>White</span>
+    </aside>
+    <aside class="polaroid p-brown-hero">
+      <img src="../assets/color-brown.jpg" alt="Brown Henley crop">
+      <span>Brown</span>
+    </aside>
+    <div class="band-copy"><span>Soft Ribbed Knit</span><span>Two-Button Henley</span><span>Easy Layering Fit</span></div>
+
+    <aside class="model-cross">
+      <img src="../assets/color-wine.jpg" alt="Wine Henley worn crop crossing module boundary">
+    </aside>
+    <div class="detail-script">Refined</div>
+    <h2 class="detail-title">NOTICE THE DETAILS</h2>
+    <div class="hash detail">#DETAILS</div>
+    <aside class="side-model">
+      <img src="../assets/color-white.jpg" alt="White Henley worn crop">
+    </aside>
+    <section class="detail-grid" aria-label="Product details">
+      <article class="tile neck"><img src="../assets/detail-02.png" alt="Notched V neck detail"><div class="label">Notched V Neck</div></article>
+      <article class="tile button"><img src="../assets/detail-02-buttons.png" alt="Decorative two-button detail"><div class="label">Decorative Buttons</div></article>
+      <article class="tile rib"><img src="../assets/detail-02.png" alt="Ribbed knit texture"><div class="label">Ribbed Knit</div></article>
+      <article class="tile sleeve"><img src="../assets/detail-02.png" alt="Long sleeve cuff detail"><div class="label">Long Sleeves</div></article>
+    </section>
+
+    <div class="fabric-bg" aria-hidden="true"><img src="../assets/fabric-03.png" alt=""></div>
+    <div class="fabric-script">Soft</div>
+    <h2 class="fabric-title">SOFT STRETCH FEEL</h2>
+    <p class="fabric-copy">Smooth ribbed knit moves with you and keeps a lightweight feel for solo wear or layering.</p>
+    <div class="touch">touch</div>
+    <section class="fabric-main" aria-label="Ribbed knit macro">
+      <img src="../assets/fabric-03.png" alt="Wine and white ribbed fabric texture">
+    </section>
+    <section class="fabric-sticker" aria-label="Henley neckline fabric crop">
+      <img src="../assets/fabric-03.png" alt="Wine Henley neckline and button detail">
+    </section>
+    <aside class="mini-model mini-white"><img src="../assets/color-white.jpg" alt="White Henley worn crop"></aside>
+    <aside class="mini-model mini-black"><img src="../assets/color-black.jpg" alt="Black Henley worn crop"></aside>
+    <section class="proofs" aria-label="Fabric attributes">
+      <div class="proof">95% Viscose</div>
+      <div class="proof">5% Spandex</div>
+      <div class="proof">Machine Wash</div>
+    </section>
+  </main>
+</body>
+</html>
