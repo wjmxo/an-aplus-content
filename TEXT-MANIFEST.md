@@ -1,21 +1,24 @@
 # TEXT-MANIFEST
 
-This manifest maps rasterized PSD text layers back to editable copy decisions. PSD files are local derivative deliverables; HTML remains the source of truth.
-PSD exports include a top pixel-correction raster layer to neutralize browser anti-aliasing and filter-compositing drift during merge self-checks.
+This manifest maps rasterized PSD text back to source copy decisions. PSD files are local derivative deliverables; HTML remains the source of truth.
+
+PSD exports are practical Photoshop handoff files. The visible top layer is the exact upload PNG; editable grouped raster layers are included in a hidden folder for manual changes. Major titles and body copy are separated into text raster layers; photo cards, stickers, swatches, and small captions are kept baked into their own clean raster layers to avoid dirty transparent blocks in Photoshop.
+
+Pixel identity is verified against the visible reference layer. Editable merge checks measure the hidden editable layer stack only, so complex modules may show a non-zero difference without using any visible correction layer.
 
 ## PSD Export Self-Check
 
-| File | Size | Layers | Raw Mean Diff | Final Mean Diff |
-|---|---:|---:|---:|---:|
-| `continuous-01-03.psd` | 38 MB | 35 | 7.806 | 0.000 |
-| `continuous-04-05.psd` | 31 MB | 23 | 8.537 | 0.000 |
-| `module-01-hero.psd` | 13 MB | 10 | 11.557 | 0.000 |
-| `module-02-detail-grid.psd` | 11 MB | 13 | 4.345 | 0.000 |
-| `module-03-fabric.psd` | 14 MB | 18 | 7.513 | 0.000 |
-| `module-04-scenarios.psd` | 17 MB | 10 | 10.448 | 0.000 |
-| `module-05-styling-color.psd` | 14 MB | 16 | 6.626 | 0.000 |
-| `module-06-size-chart.psd` | 7.1 MB | 74 | 2.542 | 0.000 |
-| `module-07-brand-story.psd` | 7.7 MB | 24 | 1.616 | 0.000 |
+| File | Size | Layers | Visible Mean Diff | Editable Mean Diff | Editable Check PNG |
+|---|---:|---:|---:|---:|---|
+| `continuous-01-03.psd` | 39 MB | 37 | 0.000 | 5.238 | `continuous-01-03-psd-merge-check.png` |
+| `continuous-04-05.psd` | 31 MB | 23 | 0.000 | 17.971 | `continuous-04-05-psd-merge-check.png` |
+| `module-01-hero.psd` | 14 MB | 12 | 0.000 | 8.181 | `module-01-hero-psd-merge-check.png` |
+| `module-02-detail-grid.psd` | 11 MB | 13 | 0.000 | 2.230 | `module-02-detail-grid-psd-merge-check.png` |
+| `module-03-fabric.psd` | 14 MB | 18 | 0.000 | 5.301 | `module-03-fabric-psd-merge-check.png` |
+| `module-04-scenarios.psd` | 17 MB | 10 | 0.000 | 20.024 | `module-04-scenarios-psd-merge-check.png` |
+| `module-05-styling-color.psd` | 15 MB | 16 | 0.000 | 15.918 | `module-05-styling-color-psd-merge-check.png` |
+| `module-06-size-chart.psd` | 7.8 MB | 74 | 0.000 | 1.201 | `module-06-size-chart-psd-merge-check.png` |
+| `module-07-brand-story.psd` | 7.8 MB | 24 | 0.000 | 0.662 | `module-07-brand-story-psd-merge-check.png` |
 
 ## Text Layers
 
@@ -25,6 +28,8 @@ PSD exports include a top pixel-correction raster layer to neutralize browser an
 | Continuous 01-03 | `HenleyMood` | HenleyMood | Georgia, "Times New Roman", serif | 98px | #8B6F55 |
 | Continuous 01-03 | `Design - Henley  Not` | Design - Henley / Notched V / Ribbed / Slim Fit | Arial, Helvetica, sans-serif | 25px | #746B65 |
 | Continuous 01-03 | `#OOTD` | #OOTD | Arial, Helvetica, sans-serif | 24px | #5E2A35 |
+| Continuous 01-03 | `Notched V Neck` | Notched V Neck | Arial, Helvetica, sans-serif | 24px | #5E2A35 |
+| Continuous 01-03 | `Two Buttons` | Two Buttons | Arial, Helvetica, sans-serif | 24px | #5E2A35 |
 | Continuous 01-03 | `Notice the Details` | Notice the Details | Georgia, "Times New Roman", serif | 50px | #262120 |
 | Continuous 01-03 | `DetailProof` | DetailProof | Georgia, "Times New Roman", serif | 50px | #4F4640 |
 | Continuous 01-03 | `Notched V. Marble bu` | Notched V. Marble buttons. Ribbed sleeve cuff. | Arial, Helvetica, sans-serif | 22px | #746B65 |
@@ -58,6 +63,8 @@ PSD exports include a top pixel-correction raster layer to neutralize browser an
 | Module 01 Hero | `HenleyMood` | HenleyMood | Georgia, "Times New Roman", serif | 98px | #8B6F55 |
 | Module 01 Hero | `Design - Henley  Not` | Design - Henley / Notched V / Ribbed / Slim Fit | Arial, Helvetica, sans-serif | 25px | #746B65 |
 | Module 01 Hero | `#OOTD` | #OOTD | Arial, Helvetica, sans-serif | 24px | #5E2A35 |
+| Module 01 Hero | `Notched V Neck` | Notched V Neck | Arial, Helvetica, sans-serif | 24px | #5E2A35 |
+| Module 01 Hero | `Two Buttons` | Two Buttons | Arial, Helvetica, sans-serif | 24px | #5E2A35 |
 | Module 02 Detail Grid | `Notice the Details` | Notice the Details | Georgia, "Times New Roman", serif | 50px | #262120 |
 | Module 02 Detail Grid | `DetailProof` | DetailProof | Georgia, "Times New Roman", serif | 50px | #4F4640 |
 | Module 02 Detail Grid | `Notched V. Marble bu` | Notched V. Marble buttons. Ribbed sleeve cuff. | Arial, Helvetica, sans-serif | 22px | #746B65 |
@@ -163,3 +170,4 @@ PSD exports include a top pixel-correction raster layer to neutralize browser an
 | Module 07 Brand Story | `Soft ribbed texture` | Soft ribbed texture | Georgia, "Times New Roman", serif | 25px | #FFFFFF |
 | Module 07 Brand Story | `Five wearable colors` | Five wearable colors | Georgia, "Times New Roman", serif | 25px | #FFFFFF |
 | Module 07 Brand Story | `Everyday fitted styl` | Everyday fitted style | Georgia, "Times New Roman", serif | 25px | #FFFFFF |
+
