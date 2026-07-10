@@ -136,6 +136,7 @@ await browser.close();
 - [ ] `copy.md` — 全部文案 + 每图 Alt 关键词
 - [ ] `modules/*.html` — 各模块设计源文件
 - [ ] `output/*.png` — 2 倍尺寸成品图,命名如 `01-hero-1464x600.png`
+- [ ] `output/psd/*.psd` — 本地衍生交付物,由 `scripts/export-psd.mjs` 从 HTML/PNG 重新导出;HTML 是唯一源文件,PSD 内修改不回流系统
 - [ ] `README-upload.md` — 上传指引:每张图对应后台哪个模块、填哪些文字字段
 
 ## 六、迭代规则
