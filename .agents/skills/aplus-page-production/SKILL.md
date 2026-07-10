@@ -1,6 +1,6 @@
 ---
 name: aplus-page-production
-description: Use when the user asks to make, revise, lay out, slice, render, export, visually self-check, or push Amazon A+ page modules from an already-approved asset library, including HTML/CSS modules, continuous canvases, PNG outputs, upload packages, and layout-only fixes. Do not use for generating new model/detail/scene/accessory assets or asset-library replenishment; missing assets must route to aplus-asset-production.
+description: Use when the user asks to make, revise, lay out, slice, render, export, visually self-check, or push Amazon A+ page modules from an already-approved asset library, including HTML/CSS modules, continuous canvases, PNG outputs, upload packages, and layout-only fixes. Do not use for generating new model/detail/scene/accessory assets or asset-library replenishment; missing assets must route to aplus-asset-production. 中文触发:页面制作、排版、做A+模块、通版、切片、导出成品、修改版式、视觉自检
 ---
 
 # A+ Page Production
@@ -49,7 +49,7 @@ Before editing page files, read:
 
 - HTML is the only lasting source of page design.
 - Final upload images are 2x PNG files in `output/`.
-- Do not reintroduce PSD export unless the user explicitly reopens that project. The previous PSD workflow was cancelled; no PSD script is currently part of the repository.
+- PSD is a local derivative deliverable. Generate it on demand with `scripts/export-psd.mjs`; PSD files are not committed, and PSD edits do not flow back into the system.
 - Keep generated page artifacts in tracked locations already used by this repo:
   - `modules/*.html`
   - `output/*.png`
@@ -78,7 +78,8 @@ Use existing repo scripts as appropriate:
 - Build asset contact sheets when only auditing library coverage:
   - `scripts/make_asset_contact_sheet.py`
 - PSD export:
-  - No active PSD export script exists. The PSD operation has been cancelled and must not be silently rebuilt.
+  - `scripts/export-psd.mjs`
+  - PSD files are generated locally in `output/psd/`, excluded from git, and never used as source-of-truth edits.
 
 ## Page Workflow
 

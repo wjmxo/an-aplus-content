@@ -1,6 +1,6 @@
 ---
 name: aplus-asset-production
-description: Use when the user asks to generate, build, audit, or supplement an Amazon A+ asset library for a product, including first-time asset production, reference-calibrated model/detail/scene/accessory generation, or replenishment of missing assets. Do not use for page layout, HTML/CSS design, module rearrangement, slicing, PNG export, visual comparison, or upload-package tasks; those belong to aplus-page-production.
+description: Use when the user asks to generate, build, audit, or supplement an Amazon A+ asset library for a product, including first-time asset production, reference-calibrated model/detail/scene/accessory generation, or replenishment of missing assets. Do not use for page layout, HTML/CSS design, module rearrangement, slicing, PNG export, visual comparison, or upload-package tasks; those belong to aplus-page-production. 中文触发:素材生产、建素材库、补素材、补货、生成模特图、细节图、场景图、配饰图
 ---
 
 # A+ Asset Production
