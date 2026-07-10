@@ -114,7 +114,7 @@
     }
     .script.hero { left: 544px; top: 104px; font-size: 98px; transform: rotate(-7deg); z-index: 23; }
     .script.detail { left: 128px; top: 626px; font-size: 50px; color: #4F4640; transform: rotate(-5deg); }
-    .script.fabric { left: 704px; top: 1268px; font-size: 44px; transform: rotate(-8deg); }
+    .script.fabric { left: 628px; top: 1250px; font-size: 44px; transform: rotate(-8deg); z-index: 31; }
     .copy {
       position: absolute;
       z-index: 25;
@@ -173,8 +173,9 @@
       stroke-dasharray: 8 9;
       pointer-events: none;
     }
-    .callout.neck { left: 804px; top: 210px; }
-    .callout.buttons { left: 778px; top: 342px; }
+    .callout svg circle { fill: rgba(94,42,53,.62); stroke: none; }
+    .callout.neck { left: 920px; top: 204px; }
+    .callout.buttons { left: 908px; top: 286px; }
     .cutout {
       position: absolute;
       z-index: 18;
@@ -402,8 +403,8 @@
     <section class="card c-neck"><img src="../assets/gen/gen-detail-wine-01.png" alt="Henley neckline and buttons"><span>Two-Button Henley</span></section>
     <p class="serif-note hero">notched split neckline, clean everyday fit</p>
     <div class="tag hero">#OOTD</div>
-    <div class="callout neck">Notched V Neck<svg viewBox="0 0 250 90" aria-hidden="true"><path d="M6 36 C70 8 134 18 214 50"/><path d="M204 42 l18 10 l-17 9"/></svg></div>
-    <div class="callout buttons">Two Buttons<svg viewBox="0 0 250 90" aria-hidden="true"><path d="M6 28 C78 22 142 32 236 54"/><path d="M224 46 l18 10 l-18 8"/></svg></div>
+    <div class="callout neck">Notched V Neck<svg viewBox="0 0 250 90" aria-hidden="true"><path d="M6 36 C70 8 134 18 214 50"/><circle cx="220" cy="53" r="5" fill="rgba(94,42,53,.62)" stroke="none"/></svg></div>
+    <div class="callout buttons">Two Buttons<svg viewBox="0 0 250 90" aria-hidden="true"><path d="M6 28 C78 22 142 32 226 54"/><circle cx="232" cy="56" r="5" fill="rgba(94,42,53,.62)" stroke="none"/></svg></div>
     <svg class="arrow one" viewBox="0 0 240 120" aria-hidden="true"><path d="M12 78 C70 18 122 18 170 58 C190 74 208 72 222 50"/><path d="M214 50 l18 0 l-8 16"/></svg>
 
     <section class="cutout main-black-detail"><img src="../assets/gen/gen-model-black-back-01.png" alt="Black Henley back over-shoulder detail protagonist"></section>
@@ -425,7 +426,6 @@
     <section class="card c-fabric fabric-combo" aria-label="Fabric and stretch proof">
       <figure><img src="../assets/gen/gen-detail-wine-02.png" alt="Soft ribbed fabric macro"><figcaption>Ribbed Texture</figcaption></figure>
       <figure class="stretch"><img src="../assets/gen/gen-detail-wine-stretch-01.png" alt="Hands gently stretching wine ribbed fabric"><figcaption>Easy Stretch</figcaption></figure>
-      <span>Fabric Display</span>
     </section>
     <p class="serif-note fabric">smooth rib texture with easy stretch</p>
     <div class="tag fabric">#SOFT RIB</div>

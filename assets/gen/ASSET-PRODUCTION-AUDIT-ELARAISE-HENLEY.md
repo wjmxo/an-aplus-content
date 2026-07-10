@@ -43,11 +43,11 @@ Scope: phase-one asset library only. No page production, layout, slicing, or mod
 
 ## Rule 22 Gaze / Expression Audit
 
-Official `gen-*` assets after this run: 39.
+Official `gen-*` assets after this run: 40.
 
 | Group | Assets | Gaze / expression status |
 |---|---|---|
-| Active calm anchors and protagonists | `gen-portrait-black-anchor-01.png`, `gen-model-black-back-01.png`, `gen-model-black-sidewalk-01.png`, `gen-model-duo-black-front-white-back-01.png` | Uses looking-away, over-shoulder, and focused side-view reads; active page avoids all-camera-facing repetition |
+| Active calm anchors and protagonists | `gen-portrait-black-anchor-01.png`, `gen-model-black-back-01.png`, `gen-model-black-sidewalk-01.png`, `gen-model-duo-black-calm-white-back-02.png` | Uses looking-away, over-shoulder, and focused side-view reads; active page avoids all-camera-facing repetition. New double-anchor version uses calm no-smile black front plus soft-smile white back |
 | Approved varied color/support assets | `gen-model-white-side-01.png`, `gen-model-red-sit-02.png`, `gen-model-wine-side-01.png`, `gen-model-black-sit-01.png` | Used to diversify color-card head direction and pose |
 | Draft redundancy pool | `gen-portrait-wine-01.png`, `gen-portrait-black-01.png`, `gen-portrait-red-01.png`, `gen-model-wine-01.png`, `gen-model-brown-01.png`, `gen-model-red-01.png`, `gen-portrait-black-close-01.png` | Marked Draft in `INDEX.md` because they repeat camera-facing / soft-smile direction too often |
 | Optional future补货 | Black downward-looking sleeve-adjusting cutout | Only needed if a future layout must explicitly show the "低头" gaze class in a main model |
